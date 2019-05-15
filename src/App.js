@@ -1,10 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 
 const  App = () => {
 
 	const [counter, setCount] = useState(0)
 	const [name, setName] = useState('empty')
+
+	useEffect(() => {
+    // Update the document title using the browser API
+		document.title = `You clicked ${counter} times`;
+		
+		return () => { console.log('unmount') }
+  },[counter]);
 
 	return (
 		<div className="App">
