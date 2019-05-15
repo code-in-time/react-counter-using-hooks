@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const  App = () => {
+
+	const [counter, setCount] = useState(0)
+	const [name, setName] = useState('empty')
+
+	return (
+		<div className="App">
+			 :The counter | <button onClick={() => setCount(counter + 1)}> count + </button> {counter}<br /><br/>
+			The Name <input onChange={(e) => setName(e.target.value)} onFocus={() => setName('')} type="text" value={name} /> {name}:<br /><br/>
+
+			
+		</div>
+	);
 }
 
 export default App;
