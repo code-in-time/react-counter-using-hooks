@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 
 export default props => {
@@ -9,11 +9,11 @@ export default props => {
         <div className="cell">
         </div>
 
-        <ul class="nav">
-          <li class="nav-item">
+        <ul className="nav nav-tabs">
+          <li className="nav-item">
             <Link to='/contact' className="nav-link">Contact</Link>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <Link to='/' className="nav-link">HOME</Link>
           </li>
         </ul>
